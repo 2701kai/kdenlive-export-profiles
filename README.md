@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/kdenlive-logo.png" alt="Kdenlive" width="120"/>
+  <img src="https://raw.githubusercontent.com/2701kai/kdenlive-export-profiles/main/assets/kdenlive-logo.png" alt="Kdenlive" width="120"/>
 </p>
 
 <h1 align="center">Kdenlive Export Profiles</h1>
