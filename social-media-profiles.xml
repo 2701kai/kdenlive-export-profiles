@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Social Media Export Profiles 2025
+     Optimized for YouTube, TikTok, Twitter/X, LinkedIn, Facebook, Pinterest
+     Includes landscape and portrait variants
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with libx264
+-->
+<profiles version="0.1">
+ <group name="YouTube/Vimeo Upload" renderer="avformat" type="av">
+  <profile name="YouTube 1080p Landscape" extension="mp4"
+   bitrates="15000,8000" defaultbitrate="12000"
+   audiobitrates="384,192" defaultaudiobitrate="320"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="2" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="YouTube 4K Landscape" extension="mp4"
+   bitrates="50000,30000" defaultbitrate="40000"
+   audiobitrates="512,256" defaultaudiobitrate="384"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=5.1 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="2" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="YouTube Shorts 9:16 (1080x1920)" extension="mp4"
+   bitrates="10000,5000" defaultbitrate="8000"
+   audiobitrates="256,128" defaultaudiobitrate="192"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="2" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+ </group>
+ <group name="Social Media (All Platforms)" renderer="avformat" type="av">
+  <profile name="Twitter/X Landscape" extension="mp4"
+   bitrates="8000,3000" defaultbitrate="5000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Twitter/X Portrait 9:16" extension="mp4"
+   bitrates="8000,3000" defaultbitrate="5000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="LinkedIn Landscape" extension="mp4"
+   bitrates="10000,4000" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="LinkedIn Portrait 4:5" extension="mp4"
+   bitrates="10000,4000" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="TikTok 9:16 (1080x1920)" extension="mp4"
+   bitrates="10000,4000" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Facebook/Meta Landscape" extension="mp4"
+   bitrates="10000,4000" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Facebook/Meta Portrait 4:5" extension="mp4"
+   bitrates="10000,4000" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Pinterest Portrait 2:3" extension="mp4"
+   bitrates="8000,3000" defaultbitrate="5000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+ </group>
+</profiles>

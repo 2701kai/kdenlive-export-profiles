@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Web Responsive H.264 Export Profiles
+     Universal browser compatibility (Safari, Chrome, Firefox, Edge)
+     Includes landscape, portrait, and square variants
+     CRF-based quality for optimal file size
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with libx264
+-->
+<profiles version="0.1">
+ <group name="Web H.264 Landscape (Universal)" renderer="avformat" type="av">
+  <profile name="Web 1080p Landscape" extension="mp4"
+   qualities="23,15" defaultquality="20"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 crf=%quality g=60 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Web 720p Landscape" extension="mp4"
+   qualities="25,17" defaultquality="21"
+   audiobitrates="160,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=3.1 crf=%quality g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Web 480p Landscape (data saver)" extension="mp4"
+   qualities="28,20" defaultquality="23"
+   audiobitrates="128,64" defaultaudiobitrate="96"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=baseline level=3.0 crf=%quality g=30 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="4" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Web 4K Landscape" extension="mp4"
+   qualities="22,14" defaultquality="18"
+   audiobitrates="256,128" defaultaudiobitrate="192"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=5.1 crf=%quality g=60 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+ </group>
+ <group name="Web H.264 Portrait/Square (Mobile)" renderer="avformat" type="av">
+  <profile name="Web 1080x1920 Portrait 9:16" extension="mp4"
+   qualities="23,15" defaultquality="20"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 crf=%quality g=60 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Web 1080x1350 Portrait 4:5" extension="mp4"
+   qualities="23,15" defaultquality="20"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 crf=%quality g=60 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Web 1080x1080 Square 1:1" extension="mp4"
+   qualities="23,15" defaultquality="20"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 crf=%quality g=60 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Web 720x1280 Portrait 9:16" extension="mp4"
+   qualities="25,17" defaultquality="21"
+   audiobitrates="160,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=3.1 crf=%quality g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Web 720x720 Square 1:1" extension="mp4"
+   qualities="25,17" defaultquality="21"
+   audiobitrates="160,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=3.1 crf=%quality g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+ </group>
+ <group name="Web Background (Hero/Loop)" renderer="avformat" type="av">
+  <profile name="BG 1080p Landscape (muted)" extension="mp4"
+   qualities="28,18" defaultquality="23"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main crf=%quality g=60 pix_fmt=yuv420p an=1 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="BG 1080p Portrait 9:16 (muted)" extension="mp4"
+   qualities="28,18" defaultquality="23"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main crf=%quality g=60 pix_fmt=yuv420p an=1 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="BG 720p Landscape (tiny)" extension="mp4"
+   qualities="32,20" defaultquality="26"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main crf=%quality g=30 pix_fmt=yuv420p an=1 threads=10"
+   defaultspeedindex="4" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="BG 720p Portrait 9:16 (tiny)" extension="mp4"
+   qualities="32,20" defaultquality="26"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main crf=%quality g=30 pix_fmt=yuv420p an=1 threads=10"
+   defaultspeedindex="4" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+ </group>
+</profiles>

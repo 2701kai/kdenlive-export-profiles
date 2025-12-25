@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AV1 Next-Gen Export Profiles
+     50% smaller than H.264 at same quality
+     Best compression available, slower encoding
+     Supported in Chrome 70+, Firefox 67+, Edge 79+, Safari 17+
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with libaom-av1
+     Note: Encoding is CPU-intensive, expect longer render times
+-->
+<profiles version="0.1">
+ <group name="AV1 Landscape (Next-Gen)" renderer="avformat" type="av">
+  <profile name="AV1 1080p Landscape (50% smaller)" extension="mp4"
+   qualities="35,20" defaultquality="28"
+   audiobitrates="160,64" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libaom-av1 crf=%quality cpu-used=4 row-mt=1 tiles=2x2 acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"/>
+  <profile name="AV1 720p Landscape (tiny)" extension="mp4"
+   qualities="38,25" defaultquality="32"
+   audiobitrates="128,64" defaultaudiobitrate="96"
+   args="f=mp4 movflags=+faststart vcodec=libaom-av1 crf=%quality cpu-used=5 row-mt=1 tiles=2x1 acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"/>
+  <profile name="AV1 WebM Landscape (Opus)" extension="webm"
+   qualities="35,20" defaultquality="28"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libaom-av1 crf=%quality cpu-used=4 row-mt=1 tiles=2x2 acodec=libopus compression_level=%audioquality threads=10"/>
+ </group>
+ <group name="AV1 Portrait/Square (Mobile)" renderer="avformat" type="av">
+  <profile name="AV1 1080x1920 Portrait 9:16" extension="mp4"
+   qualities="35,20" defaultquality="28"
+   audiobitrates="160,64" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libaom-av1 crf=%quality cpu-used=4 row-mt=1 tiles=2x2 acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"/>
+  <profile name="AV1 1080x1350 Portrait 4:5" extension="mp4"
+   qualities="35,20" defaultquality="28"
+   audiobitrates="160,64" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libaom-av1 crf=%quality cpu-used=4 row-mt=1 tiles=2x2 acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"/>
+  <profile name="AV1 1080x1080 Square 1:1" extension="mp4"
+   qualities="35,20" defaultquality="28"
+   audiobitrates="160,64" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libaom-av1 crf=%quality cpu-used=4 row-mt=1 tiles=2x2 acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"/>
+  <profile name="AV1 WebM Portrait 9:16 (Opus)" extension="webm"
+   qualities="35,20" defaultquality="28"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libaom-av1 crf=%quality cpu-used=4 row-mt=1 tiles=2x2 acodec=libopus compression_level=%audioquality threads=10"/>
+ </group>
+</profiles>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Instagram Export Profiles 2025
+     Optimized for Instagram Reels, Stories, and Feed posts
+     Includes CPU and VAAPI (Intel GPU) variants
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with libx264
+     VAAPI profiles require Intel GPU with VA-API support
+-->
+<profiles version="0.1">
+ <group name="Instagram (2025)" renderer="avformat" type="av">
+  <profile name="Reels/Stories 9:16 (1080x1920)" extension="mp4"
+   bitrates="10000,3500" defaultbitrate="8000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=60 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Feed Portrait 4:5 (1080x1350)" extension="mp4"
+   bitrates="10000,3500" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=60 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Feed Square 1:1 (1080x1080)" extension="mp4"
+   bitrates="8000,3500" defaultbitrate="5000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=60 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="Feed Landscape 16:9 (1920x1080)" extension="mp4"
+   bitrates="10000,3500" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=4.0 vb=%bitrate+'k' g=60 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+ </group>
+ <group name="Instagram VAAPI (Intel GPU)" renderer="avformat" type="av">
+  <profile name="Reels VAAPI 9:16 FAST" extension="mp4"
+   bitrates="10000,3500" defaultbitrate="8000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=60 acodec=aac ab=%audiobitrate+'k' ar=48000"/>
+  <profile name="Feed Portrait VAAPI 4:5 FAST" extension="mp4"
+   bitrates="10000,3500" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=60 acodec=aac ab=%audiobitrate+'k' ar=48000"/>
+  <profile name="Feed Square VAAPI 1:1 FAST" extension="mp4"
+   bitrates="8000,3500" defaultbitrate="5000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=60 acodec=aac ab=%audiobitrate+'k' ar=48000"/>
+ </group>
+</profiles>

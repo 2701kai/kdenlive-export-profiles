@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- HEVC/H.265 Export Profiles
+     30% smaller than H.264 at same quality
+     Supported on modern devices, Apple-compatible with hvc1 tag
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with libx265
+-->
+<profiles version="0.1">
+ <group name="HEVC/H.265 (Modern devices)" renderer="avformat" type="av">
+  <profile name="HEVC 1080p Landscape" extension="mp4"
+   qualities="28,18" defaultquality="23"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx265 crf=%quality g=60 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10 tag:v=hvc1"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast;preset=superfast;preset=ultrafast"/>
+  <profile name="HEVC 1080x1920 Portrait 9:16" extension="mp4"
+   qualities="28,18" defaultquality="23"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx265 crf=%quality g=60 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10 tag:v=hvc1"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast;preset=superfast;preset=ultrafast"/>
+  <profile name="HEVC 4K Landscape" extension="mp4"
+   qualities="26,16" defaultquality="22"
+   audiobitrates="256,128" defaultaudiobitrate="192"
+   args="f=mp4 movflags=+faststart vcodec=libx265 crf=%quality g=60 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10 tag:v=hvc1"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast;preset=superfast;preset=ultrafast"/>
+ </group>
+</profiles>

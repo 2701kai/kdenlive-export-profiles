@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Archive & Lossless Export Profiles
+     High-quality intermediate codecs for editing/archiving
+     Large files, maximum quality preservation
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with relevant codecs
+-->
+<profiles version="0.1">
+ <group name="Archive DNxHD (Avid Compatible)" renderer="avformat" type="av">
+  <profile name="DNxHD 1080p 120Mbps" extension="mov"
+   args="f=mov vcodec=dnxhd vb=120000k pix_fmt=yuv422p acodec=pcm_s16le ar=48000 threads=10"/>
+  <profile name="DNxHD 1080p 185Mbps (High)" extension="mov"
+   args="f=mov vcodec=dnxhd vb=185000k pix_fmt=yuv422p acodec=pcm_s16le ar=48000 threads=10"/>
+  <profile name="DNxHD 720p 90Mbps" extension="mov"
+   args="f=mov vcodec=dnxhd vb=90000k pix_fmt=yuv422p acodec=pcm_s16le ar=48000 threads=10"/>
+ </group>
+ <group name="Archive ProRes (Apple Compatible)" renderer="avformat" type="av">
+  <profile name="ProRes 422 Proxy" extension="mov"
+   args="f=mov vcodec=prores_ks profile:v=0 pix_fmt=yuv422p10le acodec=pcm_s16le ar=48000 threads=10"/>
+  <profile name="ProRes 422 LT" extension="mov"
+   args="f=mov vcodec=prores_ks profile:v=1 pix_fmt=yuv422p10le acodec=pcm_s16le ar=48000 threads=10"/>
+  <profile name="ProRes 422" extension="mov"
+   args="f=mov vcodec=prores_ks profile:v=2 pix_fmt=yuv422p10le acodec=pcm_s16le ar=48000 threads=10"/>
+  <profile name="ProRes 422 HQ" extension="mov"
+   args="f=mov vcodec=prores_ks profile:v=3 pix_fmt=yuv422p10le acodec=pcm_s16le ar=48000 threads=10"/>
+  <profile name="ProRes 4444" extension="mov"
+   args="f=mov vcodec=prores_ks profile:v=4 pix_fmt=yuva444p10le acodec=pcm_s16le ar=48000 threads=10"/>
+ </group>
+ <group name="Lossless (Maximum Quality)" renderer="avformat" type="av">
+  <profile name="FFV1 Lossless (Archival)" extension="mkv"
+   args="f=matroska vcodec=ffv1 level=3 coder=1 context=1 slicecrc=1 pix_fmt=yuv422p10le acodec=flac ar=48000 threads=10"/>
+  <profile name="UT Video Lossless" extension="avi"
+   args="f=avi vcodec=utvideo pix_fmt=yuv422p acodec=pcm_s16le ar=48000 threads=10"/>
+  <profile name="HuffYUV Lossless" extension="avi"
+   args="f=avi vcodec=huffyuv pix_fmt=yuv422p acodec=pcm_s16le ar=48000 threads=10"/>
+ </group>
+</profiles>

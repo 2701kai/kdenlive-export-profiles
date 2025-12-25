@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- iPhone/iOS Compatible Export Profiles
+     Guaranteed playback on all iOS devices
+     H.264 Main/Baseline profile, yuv420p, AAC audio
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with libx264
+-->
+<profiles version="0.1">
+ <group name="iPhone Compatible (Universal)" renderer="avformat" type="av">
+  <profile name="iPhone 1080p Landscape" extension="mp4"
+   bitrates="15000,3000" defaultbitrate="8000"
+   audiobitrates="192,96" defaultaudiobitrate="160"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="iPhone 1080x1920 Portrait 9:16" extension="mp4"
+   bitrates="15000,3000" defaultbitrate="8000"
+   audiobitrates="192,96" defaultaudiobitrate="160"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=4.0 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="iPhone 1080p60 Landscape" extension="mp4"
+   bitrates="20000,5000" defaultbitrate="12000"
+   audiobitrates="192,96" defaultaudiobitrate="160"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=main level=4.1 vb=%bitrate+'k' g=60 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="iPhone 720p (Max Compat)" extension="mp4"
+   bitrates="8000,2000" defaultbitrate="5000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=baseline level=3.1 vb=%bitrate+'k' g=30 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=44100 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+  <profile name="iPhone 4K Landscape" extension="mp4"
+   bitrates="40000,15000" defaultbitrate="25000"
+   audiobitrates="256,128" defaultaudiobitrate="192"
+   args="f=mp4 movflags=+faststart vcodec=libx264 profile=high level=5.1 vb=%bitrate+'k' g=30 bf=2 pix_fmt=yuv420p acodec=aac ab=%audiobitrate+'k' ar=48000 threads=10"
+   defaultspeedindex="3" speeds="preset=veryslow;preset=slower;preset=slow;preset=medium;preset=fast;preset=faster;preset=veryfast"/>
+ </group>
+</profiles>

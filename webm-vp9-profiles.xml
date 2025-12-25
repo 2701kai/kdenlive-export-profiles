@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WebM VP9 Export Profiles
+     40% smaller than H.264 at same quality
+     Works in Chrome, Firefox, Edge (not Safari)
+     Includes Opus audio for best compression
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, FFmpeg with libvpx-vp9, libopus
+-->
+<profiles version="0.1">
+ <group name="WebM VP9 Landscape (Chrome/FF/Edge)" renderer="avformat" type="av">
+  <profile name="VP9 1080p Landscape (40% smaller)" extension="webm"
+   qualities="35,20" defaultquality="28"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=60 row-mt=1 tile-columns=2 frame-parallel=1 acodec=libopus compression_level=%audioquality threads=10"/>
+  <profile name="VP9 720p Landscape" extension="webm"
+   qualities="38,22" defaultquality="30"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=30 row-mt=1 tile-columns=2 acodec=libopus compression_level=%audioquality threads=10"/>
+  <profile name="VP9 4K Landscape" extension="webm"
+   qualities="32,18" defaultquality="25"
+   audioqualities="5,0" defaultaudioquality="2"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=60 row-mt=1 tile-columns=4 frame-parallel=1 acodec=libopus compression_level=%audioquality threads=10"/>
+ </group>
+ <group name="WebM VP9 Portrait/Square (Mobile)" renderer="avformat" type="av">
+  <profile name="VP9 1080x1920 Portrait 9:16" extension="webm"
+   qualities="35,20" defaultquality="28"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=60 row-mt=1 tile-columns=2 frame-parallel=1 acodec=libopus compression_level=%audioquality threads=10"/>
+  <profile name="VP9 1080x1350 Portrait 4:5" extension="webm"
+   qualities="35,20" defaultquality="28"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=60 row-mt=1 tile-columns=2 acodec=libopus compression_level=%audioquality threads=10"/>
+  <profile name="VP9 1080x1080 Square 1:1" extension="webm"
+   qualities="35,20" defaultquality="28"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=60 row-mt=1 tile-columns=2 acodec=libopus compression_level=%audioquality threads=10"/>
+  <profile name="VP9 720x1280 Portrait 9:16" extension="webm"
+   qualities="38,22" defaultquality="30"
+   audioqualities="5,0" defaultaudioquality="3"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=30 row-mt=1 tile-columns=2 acodec=libopus compression_level=%audioquality threads=10"/>
+ </group>
+ <group name="WebM VP9 Background (Muted)" renderer="avformat" type="av">
+  <profile name="BG WebM VP9 Landscape" extension="webm"
+   qualities="35,20" defaultquality="30"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=60 row-mt=1 tile-columns=2 an=1 threads=10"/>
+  <profile name="BG WebM VP9 Portrait 9:16" extension="webm"
+   qualities="35,20" defaultquality="30"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=0 g=60 row-mt=1 tile-columns=2 an=1 threads=10"/>
+  <profile name="GIF Replacement (VP9 loop)" extension="webm"
+   qualities="35,25" defaultquality="30"
+   args="f=webm vcodec=libvpx-vp9 crf=%quality vb=2M g=30 row-mt=1 an=1 threads=10"/>
+ </group>
+</profiles>

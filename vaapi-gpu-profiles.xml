@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- VAAPI GPU-Accelerated Export Profiles
+     3-5x faster encoding using Intel/AMD GPU
+     Quality similar to CPU encoding
+
+     Installation: Copy to ~/.local/share/kdenlive/export/
+     Requires: Kdenlive 24.x+, Intel/AMD GPU with VA-API support
+
+     Verify VAAPI support: vainfo
+     Device path may vary: /dev/dri/renderD128 (Intel) or renderD129 (AMD)
+-->
+<profiles version="0.1">
+ <group name="VAAPI GPU Fast (Intel/AMD)" renderer="avformat" type="av">
+  <profile name="VAAPI 1080p Landscape" extension="mp4"
+   bitrates="15000,3000" defaultbitrate="8000"
+   audiobitrates="192,96" defaultaudiobitrate="160"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=30 acodec=aac ab=%audiobitrate+'k' ar=44100"/>
+  <profile name="VAAPI 1080x1920 Portrait 9:16" extension="mp4"
+   bitrates="15000,3000" defaultbitrate="8000"
+   audiobitrates="192,96" defaultaudiobitrate="160"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=30 acodec=aac ab=%audiobitrate+'k' ar=44100"/>
+  <profile name="VAAPI 1080x1080 Square 1:1" extension="mp4"
+   bitrates="12000,3000" defaultbitrate="6000"
+   audiobitrates="192,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=30 acodec=aac ab=%audiobitrate+'k' ar=48000"/>
+  <profile name="VAAPI 4K Landscape" extension="mp4"
+   bitrates="40000,15000" defaultbitrate="25000"
+   audiobitrates="256,128" defaultaudiobitrate="192"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=30 acodec=aac ab=%audiobitrate+'k' ar=48000"/>
+  <profile name="VAAPI 720p (Fast preview)" extension="mp4"
+   bitrates="8000,2000" defaultbitrate="5000"
+   audiobitrates="160,96" defaultaudiobitrate="128"
+   args="f=mp4 movflags=+faststart vaapi_device=/dev/dri/renderD128 vf='format=nv12,hwupload' vcodec=h264_vaapi vb=%bitrate+'k' g=30 acodec=aac ab=%audiobitrate+'k' ar=44100"/>
+ </group>
+</profiles>
