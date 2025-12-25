@@ -1,24 +1,62 @@
-# Kdenlive Export Profiles
+<p align="center">
+  <img src="https://kdenlive.org/wp-content/uploads/2016/06/kdenlive-logo.png" alt="Kdenlive" width="120"/>
+</p>
 
-[![License: CC0](https://img.shields.io/badge/License-CC0_1.0-blue.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
-[![Kdenlive 24.x+](https://img.shields.io/badge/Kdenlive-24.x+-green.svg)](https://kdenlive.org/)
-[![FFmpeg](https://img.shields.io/badge/FFmpeg-required-orange.svg)](https://ffmpeg.org/)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/2701kai/kdenlive-export-profiles/pulls)
-[![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)](https://opensource.org/)
+<h1 align="center">Kdenlive Export Profiles</h1>
 
-> **Open Source rocks!** These profiles are free for everyone. Fork, improve, share!
+<p align="center">
+  <strong>72 production-ready export presets for the modern video creator</strong>
+</p>
 
-Modern, production-ready export profiles for **Kdenlive 24.x+** optimized for web, mobile, and social media platforms.
+<p align="center">
+  <a href="https://kdenlive.org/"><img src="https://img.shields.io/badge/Made%20for-Kdenlive-blue?style=for-the-badge&logo=kde" alt="Made for Kdenlive"/></a>
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/"><img src="https://img.shields.io/badge/License-CC0%201.0-green?style=for-the-badge" alt="CC0 License"/></a>
+  <a href="https://ffmpeg.org/"><img src="https://img.shields.io/badge/Powered%20by-FFmpeg-orange?style=for-the-badge&logo=ffmpeg" alt="FFmpeg"/></a>
+</p>
+
+<p align="center">
+  <a href="#-quick-install"><img src="https://img.shields.io/badge/Install-2%20minutes-brightgreen?style=flat-square" alt="Install time"/></a>
+  <a href="https://github.com/2701kai/kdenlive-export-profiles/stargazers"><img src="https://img.shields.io/github/stars/2701kai/kdenlive-export-profiles?style=flat-square&color=yellow" alt="Stars"/></a>
+  <a href="https://github.com/2701kai/kdenlive-export-profiles/network/members"><img src="https://img.shields.io/github/forks/2701kai/kdenlive-export-profiles?style=flat-square" alt="Forks"/></a>
+  <a href="https://github.com/2701kai/kdenlive-export-profiles/issues"><img src="https://img.shields.io/github/issues/2701kai/kdenlive-export-profiles?style=flat-square" alt="Issues"/></a>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=3584E4&center=true&vCenter=true&width=500&lines=Instagram+%E2%9C%93+YouTube+%E2%9C%93+TikTok+%E2%9C%93;H.264+%E2%9C%93+HEVC+%E2%9C%93+VP9+%E2%9C%93+AV1+%E2%9C%93;GPU+Acceleration+%E2%9C%93+iPhone+Compatible+%E2%9C%93;Open+Source+Rocks!" alt="Typing SVG" />
+</p>
+
+---
+
+> **Open Source rocks!** These profiles are free for everyone. Fork it, improve it, share it!
+
+Modern, production-ready export profiles for **[Kdenlive](https://kdenlive.org/) 24.x+** optimized for web, mobile, and social media platforms.
 
 ## Why These Profiles?
 
-- **60+ export presets** in 9 organized packs
-- **2025 platform specs** for Instagram, TikTok, YouTube, etc.
+<table>
+<tr>
+<td width="50%">
+
+### Features
+- **72 export presets** in 9 organized packs
+- **2025 platform specs** for all major platforms
 - **All aspect ratios**: 16:9, 9:16, 4:5, 1:1
 - **Modern codecs**: H.264, HEVC, VP9, AV1
-- **GPU acceleration**: VAAPI for Intel/AMD (3-5x faster)
-- **iPhone compatible**: Guaranteed playback on Apple devices
-- **Web optimized**: faststart, proper levels, browser-tested
+- **GPU acceleration**: 3-5x faster with VAAPI
+
+</td>
+<td width="50%">
+
+### Platforms
+- Instagram (Reels, Feed, Stories)
+- YouTube (1080p, 4K)
+- TikTok, Twitter/X, LinkedIn
+- Facebook, Threads
+- General web & mobile
+
+</td>
+</tr>
+</table>
 
 ## Quick Install
 
@@ -26,190 +64,176 @@ Modern, production-ready export profiles for **Kdenlive 24.x+** optimized for we
 # Clone and install all profiles
 git clone https://github.com/2701kai/kdenlive-export-profiles.git
 cp kdenlive-export-profiles/*.xml ~/.local/share/kdenlive/export/
-
-# Or install individual packs
-cp kdenlive-export-profiles/instagram-2025-profiles.xml ~/.local/share/kdenlive/export/
 ```
 
-Restart Kdenlive. Profiles appear in **Render > More Options**.
+Restart Kdenlive. New profiles appear in **Render > More Options**.
+
+<details>
+<summary><strong>Individual pack install</strong></summary>
+
+```bash
+# Install only what you need
+cp kdenlive-export-profiles/instagram-2025-profiles.xml ~/.local/share/kdenlive/export/
+cp kdenlive-export-profiles/social-media-profiles.xml ~/.local/share/kdenlive/export/
+```
+
+</details>
 
 ## Profile Packs
 
-| Pack | Profiles | Best For |
-|------|----------|----------|
-| [web-responsive-h264](web-responsive-h264-profiles.xml) | 13 | Universal browser compatibility |
-| [webm-vp9](webm-vp9-profiles.xml) | 10 | 40% smaller, Chrome/Firefox/Edge |
-| [av1-nextgen](av1-nextgen-profiles.xml) | 7 | 50% smaller, future-proof |
-| [hevc-h265](hevc-h265-profiles.xml) | 3 | 30% smaller, Apple-compatible |
-| [instagram-2025](instagram-2025-profiles.xml) | 7 | Reels, Feed, Stories |
-| [social-media](social-media-profiles.xml) | 11 | YouTube, TikTok, Twitter, LinkedIn |
-| [iphone-compatible](iphone-compatible-profiles.xml) | 5 | Guaranteed Apple playback |
-| [vaapi-gpu](vaapi-gpu-profiles.xml) | 5 | 3-5x faster with Intel/AMD GPU |
-| [archive-lossless](archive-lossless-profiles.xml) | 11 | DNxHD, ProRes, FFV1 |
-
-**Total: 72 export profiles**
-
-## Detailed Pack Contents
-
-### Web Responsive H.264 (Universal)
-*Works everywhere: Safari, Chrome, Firefox, Edge, mobile*
-
-| Profile | Resolution | Use Case |
-|---------|------------|----------|
-| Web 1080p/720p/480p/4K Landscape | 16:9 | Standard web video |
-| Web Portrait 9:16 | 1080x1920, 720x1280 | Mobile-first content |
-| Web Portrait 4:5 | 1080x1350 | Instagram Feed optimal |
-| Web Square 1:1 | 1080x1080, 720x720 | Social thumbnails |
-| BG Landscape/Portrait (muted) | Various | Hero backgrounds, loops |
-
-### WebM VP9 (Modern Web)
-*40% smaller than H.264, Opus audio*
-
-- All orientations: landscape, portrait 9:16/4:5, square
-- Background/muted variants for hero sections
-- GIF replacement profile for animated thumbnails
-
-### AV1 Next-Gen (Maximum Compression)
-*50% smaller than H.264, supported in all modern browsers*
-
-- Chrome 70+, Firefox 67+, Edge 79+, Safari 17+
-- CPU-intensive encoding, best for final delivery
-- WebM variant with Opus audio
-
-### HEVC/H.265 (Apple Ecosystem)
-*30% smaller than H.264, hvc1 tag for Apple compatibility*
-
-- Modern streaming platforms
-- 1080p and 4K variants
-- Speed presets from veryslow to ultrafast
-
-### Instagram 2025
-*Official 2025 specs: H.264, 5-10Mbps, 30fps*
-
-| Profile | Aspect | Platform Use |
-|---------|--------|--------------|
-| Reels 1080x1920 | 9:16 | Stories, Reels |
-| Feed 1080x1350 | 4:5 | Feed posts (optimal) |
-| Square 1080x1080 | 1:1 | Carousel, older Feed |
-| Landscape 1920x1080 | 16:9 | IGTV, horizontal |
-| VAAPI variants | All | GPU-accelerated |
-
-### Social Media Platforms
-*Platform-specific bitrates and settings*
-
-- **YouTube**: 1080p, 4K with high bitrate
-- **TikTok**: 1080x1920 optimized
-- **Twitter/X**: 1280x720 (platform limit)
-- **LinkedIn**: 1920x1080 professional
-- **Facebook**: Portrait + Landscape
-- **Threads**: 1080x1920 vertical
-
-### iPhone Compatible
-*Guaranteed playback on all iOS devices*
-
-- H.264 Main profile (High for newer devices)
-- Strict yuv420p pixel format
-- faststart for streaming
-- AAC audio at 48kHz
-
-### VAAPI GPU-Accelerated
-*3-5x faster encoding with Intel/AMD hardware*
-
-```bash
-# Verify VAAPI support
-vainfo
-ls -la /dev/dri/renderD*
-```
-
-- Intel: typically `/dev/dri/renderD128`
-- AMD: typically `/dev/dri/renderD129`
-
-### Archive & Lossless
-*Maximum quality for editing workflows*
-
-| Codec | Use Case | Compatibility |
-|-------|----------|---------------|
-| DNxHD 120/185Mbps | Avid interchange | Universal |
-| ProRes Proxy/LT/422/HQ/4444 | Apple/DaVinci | Professional NLE |
-| FFV1 | Long-term archival | Open standard |
-| UT Video / HuffYUV | Fast lossless editing | Windows/Linux |
-
-## Requirements
-
-### Kdenlive Version
-- **Minimum**: Kdenlive 24.x
-- **Recommended**: Kdenlive 24.12+
-
-### FFmpeg Codecs
-
-```bash
-# Check installed codecs
-ffmpeg -encoders 2>/dev/null | grep -E "libx264|libx265|libvpx|libaom|prores|dnxhd|ffv1"
-```
-
-Required codecs by pack:
-- `libx264` - H.264 profiles
-- `libx265` - HEVC profiles
-- `libvpx-vp9` - VP9 profiles
-- `libaom-av1` - AV1 profiles
-- `libopus` - Opus audio (WebM)
-- `prores_ks` - ProRes profiles
-- `dnxhd` - DNxHD profiles
-- `ffv1` - FFV1 lossless
-
-### VAAPI (GPU Acceleration)
-
-```bash
-# Ubuntu/Debian
-sudo apt install vainfo intel-media-va-driver
-
-# Verify
-vainfo
-```
+| Pack | Profiles | Compression | Best For |
+|------|:--------:|:-----------:|----------|
+| [web-responsive-h264](web-responsive-h264-profiles.xml) | 13 | Baseline | Universal browser compatibility |
+| [webm-vp9](webm-vp9-profiles.xml) | 10 | **-40%** | Chrome, Firefox, Edge |
+| [av1-nextgen](av1-nextgen-profiles.xml) | 7 | **-50%** | Future-proof delivery |
+| [hevc-h265](hevc-h265-profiles.xml) | 3 | **-30%** | Apple ecosystem |
+| [instagram-2025](instagram-2025-profiles.xml) | 7 | Optimized | Reels, Feed, Stories |
+| [social-media](social-media-profiles.xml) | 11 | Platform-tuned | YouTube, TikTok, Twitter |
+| [iphone-compatible](iphone-compatible-profiles.xml) | 5 | Compatible | Guaranteed Apple playback |
+| [vaapi-gpu](vaapi-gpu-profiles.xml) | 5 | **3-5x faster** | Intel/AMD GPU users |
+| [archive-lossless](archive-lossless-profiles.xml) | 11 | Lossless | DNxHD, ProRes, FFV1 |
 
 ## Codec Comparison
 
-| Codec | Size vs H.264 | Speed | Browser Support | Best For |
-|-------|---------------|-------|-----------------|----------|
-| H.264 | Baseline | Fast | Universal | Compatibility |
-| HEVC | -30% | Medium | Safari, modern | Apple ecosystem |
-| VP9 | -40% | Medium | No Safari | Web (non-Apple) |
-| AV1 | -50% | Slow | Modern browsers | Maximum compression |
+```
+File Size Comparison (same quality):
+
+H.264  ████████████████████████████████████████  100%
+HEVC   ████████████████████████████              70%  (-30%)
+VP9    ████████████████████████                  60%  (-40%)
+AV1    ████████████████████                      50%  (-50%)
+```
+
+| Codec | Browser Support | Speed | Best For |
+|-------|-----------------|-------|----------|
+| H.264 | All browsers | Fast | Maximum compatibility |
+| HEVC | Safari, modern apps | Medium | Apple ecosystem |
+| VP9 | Chrome, Firefox, Edge | Medium | Web (non-Apple) |
+| AV1 | Modern browsers | Slow | Maximum compression |
+
+## Platform Quick Reference
+
+<details>
+<summary><strong>Instagram 2025 Specs</strong></summary>
+
+| Format | Resolution | Profile |
+|--------|------------|---------|
+| Reels/Stories | 1080x1920 (9:16) | Instagram Reels |
+| Feed (optimal) | 1080x1350 (4:5) | Instagram Feed |
+| Square | 1080x1080 (1:1) | Instagram Square |
+| Landscape | 1920x1080 (16:9) | Instagram Landscape |
+
+**Settings**: H.264, 5-10 Mbps, 30fps, AAC audio
+
+</details>
+
+<details>
+<summary><strong>YouTube Specs</strong></summary>
+
+| Quality | Resolution | Profile |
+|---------|------------|---------|
+| 1080p | 1920x1080 | YouTube 1080p |
+| 4K | 3840x2160 | YouTube 4K |
+
+**Tip**: 4K uploads get priority processing
+
+</details>
+
+<details>
+<summary><strong>TikTok / Reels / Shorts</strong></summary>
+
+All use 9:16 vertical format (1080x1920)
+
+| Platform | Profile |
+|----------|---------|
+| TikTok | TikTok 1080x1920 |
+| Instagram Reels | Instagram Reels |
+| YouTube Shorts | (use TikTok profile) |
+
+</details>
+
+<details>
+<summary><strong>Web Background Videos</strong></summary>
+
+```html
+<video autoplay muted loop playsinline>
+  <source src="hero.webm" type="video/webm">
+  <source src="hero.mp4" type="video/mp4">
+</video>
+```
+
+Use `BG` profiles (muted, optimized for looping)
+
+</details>
+
+## GPU Acceleration
+
+VAAPI profiles are **3-5x faster** on Intel/AMD GPUs.
+
+```bash
+# Check VAAPI support
+vainfo
+
+# Install drivers (Ubuntu/Debian)
+sudo apt install vainfo intel-media-va-driver
+```
+
+## Requirements
+
+- **Kdenlive**: 24.x or newer ([Download](https://kdenlive.org/download/))
+- **FFmpeg**: With required codecs
+
+```bash
+# Check installed codecs
+ffmpeg -encoders 2>/dev/null | grep -E "libx264|libx265|libvpx|libaom"
+```
+
+## Documentation
+
+- [USER_MANUAL.md](USER_MANUAL.md) - Complete usage guide
+- [Kdenlive Official Docs](https://docs.kdenlive.org/)
+- [FFmpeg Documentation](https://ffmpeg.org/documentation.html)
 
 ## Contributing
 
 Contributions welcome! Please:
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-profile`)
+2. Create feature branch (`git checkout -b feature/amazing-profile`)
 3. Test profiles in Kdenlive
-4. Commit changes (`git commit -m 'Add amazing profile'`)
-5. Push to branch (`git push origin feature/amazing-profile`)
-6. Open a Pull Request
-
-### Profile Guidelines
-
-- Use descriptive names
-- Include XML comments with requirements
-- Test on target platform before submitting
-- Follow existing naming conventions
+4. Submit a Pull Request
 
 ## Also Available On
 
-- [KDE Store](https://store.kde.org/browse?cat=334) - Kdenlive Export Profiles category
+[![KDE Store](https://img.shields.io/badge/KDE%20Store-Export%20Profiles-blue?style=for-the-badge&logo=kde)](https://store.kde.org/browse?cat=334)
 
 ## License
 
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+<p align="center">
+  <a href="https://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="https://licensebuttons.net/p/zero/1.0/88x31.png" alt="CC0"/>
+  </a>
+</p>
 
 This work is dedicated to the **public domain** under CC0 1.0. Use freely without attribution.
 
-## Star History
-
-If these profiles helped you, consider giving a star! It helps others discover this project.
-
 ---
 
-**Made with love for the Kdenlive community**
+<p align="center">
+  <strong>Made with love for the <a href="https://kdenlive.org/">Kdenlive</a> community</strong>
+</p>
 
-*Video editing should be accessible to everyone. Open Source rocks!*
+<p align="center">
+  <em>Video editing should be accessible to everyone.</em>
+</p>
+
+<p align="center">
+  <img src="https://forthebadge.com/images/badges/open-source.svg" alt="Open Source"/>
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt="Built with Love"/>
+</p>
+
+<p align="center">
+  <a href="https://github.com/2701kai/kdenlive-export-profiles/stargazers">
+    <img src="https://img.shields.io/badge/Star%20this%20repo-⭐-yellow?style=for-the-badge" alt="Star this repo"/>
+  </a>
+</p>
