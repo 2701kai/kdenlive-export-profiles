@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://kdenlive.org/wp-content/uploads/2016/06/kdenlive-logo.png" alt="Kdenlive" width="120"/>
+  <img src="assets/kdenlive-logo.png" alt="Kdenlive" width="120"/>
 </p>
 
 <h1 align="center">Kdenlive Export Profiles</h1>
@@ -63,7 +63,7 @@ Modern, production-ready export profiles for **[Kdenlive](https://kdenlive.org/)
 ```bash
 # Clone and install all profiles
 git clone https://github.com/2701kai/kdenlive-export-profiles.git
-cp kdenlive-export-profiles/*.xml ~/.local/share/kdenlive/export/
+cp kdenlive-export-profiles/profiles/*.xml ~/.local/share/kdenlive/export/
 ```
 
 Restart Kdenlive. New profiles appear in **Render > More Options**.
@@ -73,8 +73,8 @@ Restart Kdenlive. New profiles appear in **Render > More Options**.
 
 ```bash
 # Install only what you need
-cp kdenlive-export-profiles/instagram-2025-profiles.xml ~/.local/share/kdenlive/export/
-cp kdenlive-export-profiles/social-media-profiles.xml ~/.local/share/kdenlive/export/
+cp kdenlive-export-profiles/profiles/instagram-2025-profiles.xml ~/.local/share/kdenlive/export/
+cp kdenlive-export-profiles/profiles/social-media-profiles.xml ~/.local/share/kdenlive/export/
 ```
 
 </details>
@@ -83,15 +83,15 @@ cp kdenlive-export-profiles/social-media-profiles.xml ~/.local/share/kdenlive/ex
 
 | Pack | Profiles | Compression | Best For |
 |------|:--------:|:-----------:|----------|
-| [web-responsive-h264](web-responsive-h264-profiles.xml) | 13 | Baseline | Universal browser compatibility |
-| [webm-vp9](webm-vp9-profiles.xml) | 10 | **-40%** | Chrome, Firefox, Edge |
-| [av1-nextgen](av1-nextgen-profiles.xml) | 7 | **-50%** | Future-proof delivery |
-| [hevc-h265](hevc-h265-profiles.xml) | 3 | **-30%** | Apple ecosystem |
-| [instagram-2025](instagram-2025-profiles.xml) | 7 | Optimized | Reels, Feed, Stories |
-| [social-media](social-media-profiles.xml) | 11 | Platform-tuned | YouTube, TikTok, Twitter |
-| [iphone-compatible](iphone-compatible-profiles.xml) | 5 | Compatible | Guaranteed Apple playback |
-| [vaapi-gpu](vaapi-gpu-profiles.xml) | 5 | **3-5x faster** | Intel/AMD GPU users |
-| [archive-lossless](archive-lossless-profiles.xml) | 11 | Lossless | DNxHD, ProRes, FFV1 |
+| [web-responsive-h264](profiles/web-responsive-h264-profiles.xml) | 13 | Baseline | Universal browser compatibility |
+| [webm-vp9](profiles/webm-vp9-profiles.xml) | 10 | **-40%** | Chrome, Firefox, Edge |
+| [av1-nextgen](profiles/av1-nextgen-profiles.xml) | 7 | **-50%** | Future-proof delivery |
+| [hevc-h265](profiles/hevc-h265-profiles.xml) | 3 | **-30%** | Apple ecosystem |
+| [instagram-2025](profiles/instagram-2025-profiles.xml) | 7 | Optimized | Reels, Feed, Stories |
+| [social-media](profiles/social-media-profiles.xml) | 11 | Platform-tuned | YouTube, TikTok, Twitter |
+| [iphone-compatible](profiles/iphone-compatible-profiles.xml) | 5 | Compatible | Guaranteed Apple playback |
+| [vaapi-gpu](profiles/vaapi-gpu-profiles.xml) | 5 | **3-5x faster** | Intel/AMD GPU users |
+| [archive-lossless](profiles/archive-lossless-profiles.xml) | 11 | Lossless | DNxHD, ProRes, FFV1 |
 
 ## Codec Comparison
 
