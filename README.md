@@ -29,7 +29,7 @@
 
 > **Open Source rocks!** These profiles are free for everyone. Fork it, improve it, share it!
 
-Modern, production-ready export profiles for **[Kdenlive](https://kdenlive.org/) 24.x+** optimized for web, mobile, and social media platforms.
+Modern, production-ready export profiles for **[Kdenlive](https://kdenlive.org/) 24.x+** optimized for web, mobile, and social media platforms. **[USER MANUAL](https://github.com/2701kai/kdenlive-export-profiles/blob/main/USER_MANUAL.md)**
 
 ## Why These Profiles?
 
