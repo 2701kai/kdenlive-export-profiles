@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://kdenlive.org/images/kdenlive-ci-guide.svg" alt="Kdenlive" width="120"/>
+  <img src="https://kdenlive.org/images/logo-colored.svg" alt="Kdenlive" width="200"/>
 </p>
 
 <h1 align="center">Kdenlive Export Profiles</h1>
