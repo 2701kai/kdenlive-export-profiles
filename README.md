@@ -43,30 +43,19 @@ Modern, production-ready export profiles for **[Kdenlive](https://kdenlive.org/)
 
 ## Why These Profiles?
 
-<table>
-<tr>
-<td width="50%">
-<h3>Features</h3>
-<ul>
-<li><b>72 export presets</b> in 9 organized packs</li>
-<li><b>2025 platform specs</b> for all major platforms</li>
-<li><b>All aspect ratios</b>: 16:9, 9:16, 4:5, 1:1</li>
-<li><b>Modern codecs</b>: H.264, HEVC, VP9, AV1</li>
-<li><b>GPU acceleration</b>: 3-5x faster with VAAPI</li>
-</ul>
-</td>
-<td width="50%">
-<h3>Platforms</h3>
-<ul>
-<li>Instagram (Reels, Feed, Stories)</li>
-<li>YouTube (1080p, 4K)</li>
-<li>TikTok, Twitter/X, LinkedIn</li>
-<li>Facebook, Threads</li>
-<li>General web &amp; mobile</li>
-</ul>
-</td>
-</tr>
-</table>
+### Features
+- **72 export presets** in 9 organized packs
+- **2025 platform specs** for all major platforms
+- **All aspect ratios**: 16:9, 9:16, 4:5, 1:1
+- **Modern codecs**: H.264, HEVC, VP9, AV1
+- **GPU acceleration**: 3-5x faster with VAAPI
+
+### Platforms
+- Instagram (Reels, Feed, Stories)
+- YouTube (1080p, 4K)
+- TikTok, Twitter/X, LinkedIn
+- Facebook, Threads
+- General web & mobile
 
 ## Quick Install
 
