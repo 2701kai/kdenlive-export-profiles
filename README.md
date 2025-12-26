@@ -25,11 +25,21 @@
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=3584E4&center=true&vCenter=true&width=500&lines=Instagram+%E2%9C%93+YouTube+%E2%9C%93+TikTok+%E2%9C%93;H.264+%E2%9C%93+HEVC+%E2%9C%93+VP9+%E2%9C%93+AV1+%E2%9C%93;GPU+Acceleration+%E2%9C%93+iPhone+Compatible+%E2%9C%93;Open+Source+Rocks!" alt="Typing SVG" />
 </p>
 
----
 
 > **Open Source rocks!** These profiles are free for everyone. Fork it, improve it, share it!
+>
+> Zip download at **[KDE Store](https://store.kde.org/p/2338211/)**.
+>
 
-Modern, production-ready export profiles for **[Kdenlive](https://kdenlive.org/) 24.x+** optimized for web, mobile, and social media platforms. **[USER MANUAL](https://github.com/2701kai/kdenlive-export-profiles/blob/main/USER_MANUAL.md)**
+---
+
+Modern, production-ready export profiles for **[Kdenlive](https://kdenlive.org/) 24.x+** optimized for web, mobile, and social media platforms. 
+
+<h3 align="center">
+  <a href="https://github.com/2701kai/kdenlive-export-profiles/blob/main/USER_MANUAL.md"><b>USER MANUAL</b></a>
+</h3>
+
+---
 
 ## Why These Profiles?
 
